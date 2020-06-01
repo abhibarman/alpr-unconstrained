@@ -28,7 +28,7 @@ def load_network(modelpath,input_dim):
 	inputs  = keras.layers.Input(shape=(input_dim,input_dim,3))
 	outputs = model(inputs)
 
-	output_shape = tuple([s.value for s in outputs.shape[1:]])
+	output_shape = tuple([s for s in outputs.shape[1:]])
 	output_dim   = output_shape[1]
 	model_stride = input_dim / output_dim
 
